@@ -1,5 +1,10 @@
 # [Welcome to myFirstReactApp](https://reactjs.org/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![CircleCI Status](https://circleci.com/gh/facebook/react.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/facebook/react) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
 
+<a href="https://github.com/snobu/destreamer/actions">
+  <img src="https://github.com/JesielPalacios/images/blob/master/P%C3%A1gina1.png" alt="CI build status" />
+  <img src="https://github.com/JesielPalacios/images/blob/master/P%C3%A1gina2.png" alt="CI build status" />
+</a>
+
 This web application is created with the React framework with Node Js version 12.19.0. React is a JavaScript library for building user interfaces.
 
 * **Notes and specifications:** El desarrollo de esta aplicación es mediante la versión 6.14.8 de NPM y se agrega un archivo .env donde se especifíca ignorar algunos alertas relacionadas con la app. Este archivo ya se encuentra crrado en el reposirotio. [For more information on environment variables with .env files](https://www.npmjs.com/package/dotenv).
