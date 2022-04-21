@@ -12,7 +12,7 @@ export const Navbar = () => {
   <button onClick={() => scrollToP()}>bottom</button> */}
   return (
     <>
-      <header class="header" id="header">
+      <Header class="header" id="header">
             <nav class="nav container">
                 <a href="#" class="nav__logo">
                     <i class="ri-leaf-line nav__logo-icon"></i> Plantex
@@ -51,7 +51,7 @@ export const Navbar = () => {
                     </div>
                 </div>
             </nav>
-        </header>
+        </Header>
 
 
 
@@ -523,3 +523,14 @@ export const Navbar = () => {
 }
 
 {/* // Quedé por configurar la lógica de cuando se encuentra en un id de un elemento para la localización del smooth scroll */}
+
+
+export const Header = styled.div`
+  width: 100%;
+  background-color: var(--body-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  transition: .4s; /*For animation dark mode*/
+`
