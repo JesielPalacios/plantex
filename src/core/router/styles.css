@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -20,7 +20,7 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -204,13 +204,13 @@ nav {
   align-items: center;
 }
 
-.nav__logo,
+/* .nav__logo, */
 .nav__toggle,
 .nav__close {
   color: var(--title-color);
 }
 
-.nav__logo {
+/* .nav__logo {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: -1px;
@@ -218,16 +218,16 @@ nav {
   align-items: center;
   column-gap: 0.5rem;
   transition: 0.3s;
-}
+} */
 
-.nav__logo-icon {
+/* .nav__logo-icon {
   font-size: 1.15rem;
   color: var(--first-color);
-}
+} */
 
-.nav__logo:hover {
+/* .nav__logo:hover {
   color: var(--first-color);
-}
+} */
 
 .nav__toggle {
   display: inline-flex;
@@ -259,21 +259,21 @@ nav {
   cursor: pointer;
 }
 
-.nav__list {
+/* .nav__list {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
-}
+} */
 
-.nav__link {
+/* .nav__link {
   color: var(--title-color);
   font-weight: var(--font-medium);
   transition: 0.3s;
-}
+} */
 
-.nav__link:hover {
+/* .nav__link:hover {
   color: var(--first-color);
-}
+} */
 
 /* Show menu */
 .show-menu {
@@ -286,20 +286,20 @@ nav {
 }
 
 /* Active link */
-.active-link {
+/* .active-link {
   position: relative;
   color: var(--first-color);
-}
+} */
 
-.active-link::after {
-  content: "";
+/* .active-link::after {
+  content: '';
   position: absolute;
   bottom: -0.5rem;
   left: 0;
   width: 50%;
   height: 2px;
   background-color: var(--first-color);
-}
+} */
 
 /*=============== HOME ===============*/
 .home {
@@ -344,7 +344,7 @@ nav {
 }
 
 .home__social-follow::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 1rem;
   height: 2px;
@@ -905,21 +905,21 @@ nav {
     margin: 0;
   }
 
-        .nav {
-          height: calc(var(--header-height) + 1.5rem);
-          column-gap: 3rem;
-  }
+  /* .nav {
+    height: calc(var(--header-height) + 1.5rem);
+    column-gap: 3rem;
+  } */
   .nav__toggle,
   .nav__close {
     display: none;
   }
-  .nav__list {
+  /* .nav__list {
     flex-direction: row;
     column-gap: 3rem;
-  }
-  .nav__menu {
+  } */
+  /* .nav__menu {
     margin-left: auto;
-  }
+  } */
 
   .home__container,
   .about__container,

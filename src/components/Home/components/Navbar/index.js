@@ -7,52 +7,41 @@ export const Navbar = () => {
     element.scrollIntoView({ behavior: 'smooth' })
   }
 
-  {
-    /* <hr />
-  
-  <button onClick={() => scrollToP()}>bottom</button> */
-  }
   return (
     <Wrapper>
+      {/* <hr />
+      <button onClick={() => scrollToP()}>bottom</button> */}
       <Header id="header">
         <Nav className="container">
-          <a href="#" className="nav__logo">
-            <i className="ri-leaf-line nav__logo-icon"></i> Plantex
-          </a>
+          <Logo href="#">
+            <Icono className="ri-leaf-line"></Icono> Plantex
+          </Logo>
 
-          <div className="nav__menu" id="nav-menu">
-            <ul className="nav__list">
-              <li className="nav__item">
-                <a href="#home" className="nav__link active-link">
+          <Menu id="nav-menu">
+            <List>
+              <li>
+                <Link href="#home" className="nav__link active-link">
                   Home
-                </a>
+                </Link>
               </li>
-              <li className="nav__item">
-                <a href="#about" className="nav__link">
-                  About
-                </a>
+              <li>
+                <Link href="#about">About</Link>
               </li>
-              <li className="nav__item">
-                <a href="#products" className="nav__link">
-                  Products
-                </a>
+              <li>
+                <Link href="#products">Products</Link>
               </li>
-              <li className="nav__item">
-                <a href="#faqs" className="nav__link">
-                  FAQs
-                </a>
+              <li>
+                <Link href="#faqs">FAQs</Link>
               </li>
-              <li className="nav__item">
-                <a href="#contact" className="nav__link">
-                  Contact Us
-                </a>
+              <li>
+                <Link href="#contact">Contact Us</Link>
               </li>
-            </ul>
+            </List>
 
             <div className="nav__close" id="nav-close">
               <i className="ri-close-line"></i>
             </div>
-          </div>
+          </Menu>
 
           <div className="nav__btns">
             {/* <!-- Theme change button --> */}
@@ -605,4 +594,95 @@ export const Nav = styled.nav`
     height: calc(var(--header-height) + 1.5rem);
     column-gap: 3rem;
   }
+`
+
+// const Logo = styled(LinkRouter)`
+const Logo = styled.a`
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -1px;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  transition: 0.3s;
+
+  :hover {
+    color: var(--first-color);
+  }
+
+  color: var(--title-color);
+`
+
+const Icono = styled.i`
+  font-size: 1.15rem;
+  color: var(--first-color);
+`
+
+const Menu = styled.div`
+  @media screen and (max-width: 767px) {
+    position: fixed;
+    background-color: var(--container-color);
+    width: 80%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    box-shadow: -2px 0 4px hsla(var(--hue), 24%, 15%, 0.1);
+    padding: 4rem 0 0 3rem;
+    border-radius: 1rem 0 0 1rem;
+    transition: 0.3s;
+    z-index: var(--z-fixed);
+  }
+
+  @media screen and (min-width: 767px) {
+    margin-left: auto;
+  }
+`
+
+const List = styled.ul`
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+
+  @media screen and (min-width: 767px) {
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+`
+
+const Link = styled.a`
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+
+  :hover {
+    color: var(--first-color);
+  }
+
+  /* Active link */
+  /* &.active { */
+  &[aria-current] {
+    /* &[active-link] { */
+    position: relative;
+    color: var(--first-color);
+  }
+
+  &[aria-current]:after {
+    /* &.active::after { */
+    /* &[active-link]::after { */
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: var(--first-color);
+  }
+`
+
+// Arreglar esta parte
+// 
+
+const ToggleNav = styled.div`
+  font-size: 1.15rem;
+  color: var(--first-color);
 `
