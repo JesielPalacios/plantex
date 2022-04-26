@@ -32,7 +32,7 @@ export const Navbar = () => {
               <Icono className="ri-leaf-line"></Icono> Plantex
             </Logo>
 
-            <Menu id="nav-menu">
+            <Menu className={menu ? 'show-menu' : ''}>
               <List>
                 {routes.map(({ path, title }, index) => {
                   return (
@@ -51,7 +51,7 @@ export const Navbar = () => {
                 })}
               </List>
 
-              <CloseIcon id="nav-close" onClick={showMenu}>
+              <CloseIcon onClick={showMenu}>
                 <i className="ri-close-line"></i>
               </CloseIcon>
             </Menu>
@@ -68,7 +68,7 @@ export const Navbar = () => {
                 onClick={showDarkTheme}
               ></i>
 
-              <div className="nav__toggle" id="nav-toggle">
+              <div className="nav__toggle" id="nav-toggle" onClick={showMenu}>
                 <i className="ri-menu-line"></i>
               </div>
             </NavBtns>
