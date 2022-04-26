@@ -2,6 +2,7 @@
 import { Link as LinkScroll } from 'react-scroll'
 import { useState } from 'react'
 import styled from 'styled-components'
+import { routes } from '../../../../core/router/routes'
 
 export const Navbar = () => {
   // const scrollToP = () => {
@@ -19,7 +20,7 @@ export const Navbar = () => {
       <Wrapper>
         {/* <hr />
         <button onClick={() => scrollToP()}>bottom</button> */}
-        <Header id="header">
+        <Header id="header" darkTheme={darkTheme}>
           <Nav className="container">
             <Logo
               to="home"
@@ -33,61 +34,21 @@ export const Navbar = () => {
 
             <Menu id="nav-menu">
               <List>
-                <li>
-                  <Link
-                    to="home"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="about"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="products"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                  >
-                    Products
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="faqs"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                  >
-                    FAQs
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="contact"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                  >
-                    Contact Us
-                  </Link>
-                </li>
+                {routes.map(({ path, title }, index) => {
+                  return (
+                    <Link
+                      key={index}
+                      to={path}
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={0}
+                    >
+                      {title}
+                    </Link>
+                  )
+                })}
               </List>
 
               <CloseIcon id="nav-close" onClick={showMenu}>
@@ -650,8 +611,13 @@ export const Header = styled.header`
   left: 0;
   z-index: var(--z-fixed);
   transition: 0.4s; /*For animation dark mode*/
-`
 
+  ${(darkTheme) =>
+    darkTheme
+      ? 'box-shadow: 0 1px 4px hsla(var(--hue), 4%, 15%, 0.1);'
+      : 'box-shadow: 0 1px 4px hsla(var(--hue), 4%, 4%, 0.3);'}
+`
+// Miss to fix the shadows in dark mode, this doesn't work yet.
 export const Nav = styled.nav`
   height: var(--header-height);
   display: flex;
