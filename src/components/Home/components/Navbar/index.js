@@ -1,8 +1,8 @@
 // import { Link as LinkRouter } from 'react-router-dom'
-import { Link as LinkScroll } from 'react-scroll'
-import { useState } from 'react'
-import styled from 'styled-components'
-import { routes } from '../../../../core/router/routes'
+import { Link as LinkScroll } from "react-scroll";
+import { useState } from "react";
+import styled from "styled-components";
+import { routes } from "../../../../core/router/routes";
 
 export const Navbar = () => {
   // const scrollToP = () => {
@@ -10,13 +10,15 @@ export const Navbar = () => {
   //   element.scrollIntoView({ behavior: 'smooth' })
   // }
 
-  const [darkTheme, setDarkTheme] = useState(false)
-  const showDarkTheme = () => setDarkTheme(!darkTheme)
-  const [menu, setMenu] = useState(false)
-  const showMenu = () => setMenu(!menu)
+  const [darkTheme, setDarkTheme] = useState(false);
+  const showDarkTheme = () => setDarkTheme(!darkTheme);
+  const [menu, setMenu] = useState(false);
+  const showMenu = () => setMenu(!menu);
+  const [accordionQs, setAccordionQs] = useState(false);
+  const showAccordionQs = () => setAccordionQs(!accordionQs);
 
   return (
-    <body className={darkTheme ? 'dark-theme' : ''}>
+    <body className={darkTheme ? "dark-theme" : ""}>
       <Wrapper>
         {/* <hr />
         <button onClick={() => scrollToP()}>bottom</button> */}
@@ -32,7 +34,7 @@ export const Navbar = () => {
               <Icono className="ri-leaf-line"></Icono> Plantex
             </Logo>
 
-            <Menu className={menu ? 'show-menu' : ''}>
+            <Menu className={menu ? "show-menu" : ""}>
               <List>
                 {routes.map(({ path, title }, index) => {
                   return (
@@ -47,7 +49,7 @@ export const Navbar = () => {
                     >
                       {title}
                     </Link>
-                  )
+                  );
                 })}
               </List>
 
@@ -61,16 +63,16 @@ export const Navbar = () => {
               <i
                 className={
                   darkTheme
-                    ? 'ri-moon-line change-theme ri-sun-line'
-                    : 'ri-moon-line change-theme'
+                    ? "ri-moon-line change-theme ri-sun-line"
+                    : "ri-moon-line change-theme"
                 }
                 id="theme-button"
                 onClick={showDarkTheme}
               ></i>
 
-              <div className="nav__toggle" id="nav-toggle" onClick={showMenu}>
+              <ToggleNav id="nav-toggle" onClick={showMenu}>
                 <i className="ri-menu-line"></i>
-              </div>
+              </ToggleNav>
             </NavBtns>
           </Nav>
         </Header>
@@ -90,7 +92,7 @@ export const Navbar = () => {
                   apastaments. Add fresness to your new ideas.
                 </p>
                 <a to="#about" className="button button--flex">
-                  Explore{' '}
+                  Explore{" "}
                   <i className="ri-arrow-right-down-line button__icon"></i>
                 </a>
               </div>
@@ -160,7 +162,7 @@ export const Navbar = () => {
                 </div>
 
                 <a to="#" className="button--link button--flex">
-                  Shop Now{' '}
+                  Shop Now{" "}
                   <i className="ri-arrow-right-down-line button__icon"></i>
                 </a>
               </div>
@@ -298,126 +300,144 @@ export const Navbar = () => {
           </section>
 
           {/* <!--==================== QUESTIONS ====================--> */}
-          <section className="questions section" id="faqs">
+          <Questions className="section" id="faqs">
             <h2 className="section__title-center questions__title container">
               Some common questions <br /> were often asked
             </h2>
 
-            <div className="questions__container container grid">
-              <div className="questions__group">
-                <div className="questions__item">
-                  <header className="questions__header">
-                    <i className="ri-add-line questions__icon"></i>
-                    <h3 className="questions__item-title">
+            <QuestionsContainer className="container grid">
+              <QuestionsGroup>
+                <QuestionsItem className={accordionQs ? "accordion_open" : ""}>
+                  <QuestionsHeader>
+                    <QuestionsIcon
+                      className="ri-add-line"
+                      onClick={showAccordionQs}
+                    ></QuestionsIcon>
+                    <QuestionsItemTitle>
                       My flowers are falling off or dying?
-                    </h3>
-                  </header>
+                    </QuestionsItemTitle>
+                  </QuestionsHeader>
 
-                  <div className="questions__content">
-                    <p className="questions__description">
+                  <QuestionsContent>
+                    <QuestionsDescription>
                       Plants are easy way to add color energy and transform your
                       space but which planet is for you. Choosing the right
                       plant.
-                    </p>
-                  </div>
-                </div>
+                    </QuestionsDescription>
+                  </QuestionsContent>
+                </QuestionsItem>
 
-                <div className="questions__item">
-                  <header className="questions__header">
-                    <i className="ri-add-line questions__icon"></i>
-                    <h3 className="questions__item-title">
+                <QuestionsItem className={accordionQs ? "accordion_open" : ""}>
+                  <QuestionsHeader>
+                    <QuestionsIcon
+                      className="ri-add-line"
+                      onClick={showAccordionQs}
+                    ></QuestionsIcon>
+                    <QuestionsItemTitle>
                       What causes leaves to become pale?
-                    </h3>
-                  </header>
+                    </QuestionsItemTitle>
+                  </QuestionsHeader>
 
-                  <div className="questions__content">
-                    <p className="questions__description">
+                  <QuestionsContent>
+                    <QuestionsDescription>
                       Plants are easy way to add color energy and transform your
                       space but which planet is for you. Choosing the right
                       plant.
-                    </p>
-                  </div>
-                </div>
+                    </QuestionsDescription>
+                  </QuestionsContent>
+                </QuestionsItem>
 
-                <div className="questions__item">
-                  <header className="questions__header">
-                    <i className="ri-add-line questions__icon"></i>
-                    <h3 className="questions__item-title">
+                <QuestionsItem className={accordionQs ? "accordion_open" : ""}>
+                  <QuestionsHeader>
+                    <QuestionsIcon
+                      className="ri-add-line"
+                      onClick={showAccordionQs}
+                    ></QuestionsIcon>
+                    <QuestionsItemTitle>
                       What causes brown crispy leaves?
-                    </h3>
-                  </header>
+                    </QuestionsItemTitle>
+                  </QuestionsHeader>
 
-                  <div className="questions__content">
-                    <p className="questions__description">
+                  <QuestionsContent>
+                    <QuestionsDescription>
                       Plants are easy way to add color energy and transform your
                       space but which planet is for you. Choosing the right
                       plant.
-                    </p>
-                  </div>
-                </div>
-              </div>
+                    </QuestionsDescription>
+                  </QuestionsContent>
+                </QuestionsItem>
+              </QuestionsGroup>
 
-              <div className="questions__group">
-                <div className="questions__item">
-                  <header className="questions__header">
-                    <i className="ri-add-line questions__icon"></i>
-                    <h3 className="questions__item-title">
+              <QuestionsGroup>
+                <QuestionsItem className={accordionQs ? "accordion_open" : ""}>
+                  <QuestionsHeader>
+                    <QuestionsIcon
+                      className="ri-add-line"
+                      onClick={showAccordionQs}
+                    ></QuestionsIcon>
+                    <QuestionsItemTitle>
                       How do i choose a plant?
-                    </h3>
-                  </header>
+                    </QuestionsItemTitle>
+                  </QuestionsHeader>
 
-                  <div className="questions__content">
-                    <p className="questions__description">
+                  <QuestionsContent>
+                    <QuestionsDescription>
                       Plants are easy way to add color energy and transform your
                       space but which planet is for you. Choosing the right
                       plant.
-                    </p>
-                  </div>
-                </div>
+                    </QuestionsDescription>
+                  </QuestionsContent>
+                </QuestionsItem>
 
-                <div className="questions__item">
-                  <header className="questions__header">
-                    <i className="ri-add-line questions__icon"></i>
-                    <h3 className="questions__item-title">
+                <QuestionsItem className={accordionQs ? "accordion_open" : ""}>
+                  <QuestionsHeader>
+                    <QuestionsIcon
+                      className="ri-add-line"
+                      onClick={showAccordionQs}
+                    ></QuestionsIcon>
+                    <QuestionsItemTitle>
                       How do I change the pots?
-                    </h3>
-                  </header>
+                    </QuestionsItemTitle>
+                  </QuestionsHeader>
 
-                  <div className="questions__content">
-                    <p className="questions__description">
+                  <QuestionsContent>
+                    <QuestionsDescription>
                       Plants are easy way to add color energy and transform your
                       space but which planet is for you. Choosing the right
                       plant.
-                    </p>
-                  </div>
-                </div>
+                    </QuestionsDescription>
+                  </QuestionsContent>
+                </QuestionsItem>
 
-                <div className="questions__item">
-                  <header className="questions__header">
-                    <i className="ri-add-line questions__icon"></i>
-                    <h3 className="questions__item-title">
+                <QuestionsItem className={accordionQs ? "accordion_open" : ""}>
+                  <QuestionsHeader>
+                    <QuestionsIcon
+                      className="ri-add-line"
+                      onClick={showAccordionQs}
+                    ></QuestionsIcon>
+                    <QuestionsItemTitle>
                       Why are gnats flying around my plant?
-                    </h3>
-                  </header>
+                    </QuestionsItemTitle>
+                  </QuestionsHeader>
 
-                  <div className="questions__content">
-                    <p className="questions__description">
+                  <QuestionsContent>
+                    <QuestionsDescription>
                       Plants are easy way to add color energy and transform your
                       space but which planet is for you. Choosing the right
                       plant.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+                    </QuestionsDescription>
+                  </QuestionsContent>
+                </QuestionsItem>
+              </QuestionsGroup>
+            </QuestionsContainer>
+          </Questions>
 
           {/* <!--==================== CONTACT ====================--> */}
           <section className="contact section container" id="contact">
             <div className="contact__container grid">
               <div className="contact__box">
                 <h2 className="section__title">
-                  Reach out to us today <br /> via any of the given <br />{' '}
+                  Reach out to us today <br /> via any of the given <br />{" "}
                   information
                 </h2>
 
@@ -576,8 +596,8 @@ export const Navbar = () => {
         {/* <script src="js/main.js"></script> */}
       </Wrapper>
     </body>
-  )
-}
+  );
+};
 
 /* // Quedé por configurar la lógica de cuando se encuentra en un id de un elemento para la localización del smooth scroll */
 
@@ -601,7 +621,7 @@ export const Wrapper = styled.div`
       margin-right: var(--mb-1);
     }
   }
-`
+`;
 
 export const Header = styled.header`
   width: 100%;
@@ -614,9 +634,9 @@ export const Header = styled.header`
 
   ${(darkTheme) =>
     darkTheme
-      ? 'box-shadow: 0 1px 4px hsla(var(--hue), 4%, 15%, 0.1);'
-      : 'box-shadow: 0 1px 4px hsla(var(--hue), 4%, 4%, 0.3);'}
-`
+      ? "box-shadow: 0 1px 4px hsla(var(--hue), 4%, 15%, 0.1);"
+      : "box-shadow: 0 1px 4px hsla(var(--hue), 4%, 4%, 0.3);"}
+`;
 // Miss to fix the shadows in dark mode, this doesn't work yet.
 export const Nav = styled.nav`
   height: var(--header-height);
@@ -628,7 +648,7 @@ export const Nav = styled.nav`
     height: calc(var(--header-height) + 1.5rem);
     column-gap: 3rem;
   }
-`
+`;
 
 const Logo = styled(LinkScroll)`
   text-transform: uppercase;
@@ -644,12 +664,12 @@ const Logo = styled(LinkScroll)`
   :hover {
     color: var(--first-color);
   }
-`
+`;
 
 const Icono = styled.i`
   font-size: 1.15rem;
   color: var(--first-color);
-`
+`;
 
 const Menu = styled.div`
   @media screen and (max-width: 767px) {
@@ -669,7 +689,7 @@ const Menu = styled.div`
   @media screen and (min-width: 767px) {
     margin-left: auto;
   }
-`
+`;
 
 const List = styled.ul`
   display: flex;
@@ -680,7 +700,7 @@ const List = styled.ul`
     flex-direction: row;
     column-gap: 3rem;
   }
-`
+`;
 
 // const Link = styled(LinkScroll)`
 const Link = styled(LinkScroll)`
@@ -703,7 +723,7 @@ const Link = styled(LinkScroll)`
 
   /* &[aria-current]:after { */
   &.active::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -0.5rem;
     left: 0;
@@ -711,12 +731,15 @@ const Link = styled(LinkScroll)`
     height: 2px;
     background-color: var(--first-color);
   }
-`
+`;
 
 const ToggleNav = styled.div`
   color: var(--first-color);
   font-size: 1.15rem;
-`
+  cursor: pointer;
+  display: inline-flex;
+
+`;
 
 const CloseIcon = styled.div`
   color: var(--title-color);
@@ -726,10 +749,59 @@ const CloseIcon = styled.div`
   right: 1.25rem;
   cursor: pointer;
   display: none;
-`
+`;
 
 const NavBtns = styled.div`
   display: inline-flex;
   align-items: center;
   column-gap: 1rem;
+`;
+
+const Questions = styled.section`
+  background-color: var(--first-color-lighten);
 `
+
+const QuestionsContainer = styled.div`
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+`;
+
+const QuestionsGroup = styled.div`
+  display: grid;
+  row-gap: 1.5rem;
+`;
+
+const QuestionsItem = styled.div`
+  background-color: var(--container-color);
+  border-radius: 0.25rem;
+`;
+
+const QuestionsHeader = styled.div`
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 0.75rem 0.5rem;
+  cursor: pointer;
+`;
+
+const QuestionsIcon = styled.i`
+  font-size: 1.25rem;
+  color: var(--title-color);
+`;
+
+const QuestionsItemTitle = styled.h3`
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+`;
+
+const QuestionsContent = styled.div`
+  overflow: hidden;
+  height: 0;
+`;
+
+const QuestionsDescription = styled.p`
+  font-size: var(--smaller-font-size);
+  padding: 0 1.25rem 1.25rem 2.5rem;
+`;
+
+
