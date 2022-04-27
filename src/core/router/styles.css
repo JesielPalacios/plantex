@@ -558,10 +558,10 @@ the website, in dark theme
   background-color: var(--first-color-lighten);
 }
 
-/* .questions__container {
+.questions__container {
   gap: 1.5rem;
   padding: 1.5rem 0;
-} */
+}
 
 .questions__group {
   display: grid;

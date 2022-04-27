@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { useState } from 'react'
 import { Navbar } from './components/Navbar'
+import { Questions } from './components/Questions'
 
 export const Home = () => {
   const [darkTheme, setDarkTheme] = useState(false)
@@ -9,8 +10,6 @@ export const Home = () => {
   return (
     <body className={darkTheme ? 'dark-theme' : ''}>
       <Wrapper>
-        {/* <hr />
-        <button onClick={() => scrollToP()}>bottom</button> */}
         <Navbar darkTheme={darkTheme} showDarkTheme={showDarkTheme} />
 
         <main className="main">
@@ -240,7 +239,7 @@ export const Home = () => {
             <h2 className="section__title-center questions__title container">
               Some common questions <br /> were often asked
             </h2>
-            {/* <sdsiodjcsoidcbjsoidjbob */}
+            <Questions />
           </section>
 
           {/* <!--==================== CONTACT ====================--> */}
@@ -281,7 +280,7 @@ export const Home = () => {
                       placeholder=" "
                       className="contact__input"
                     />
-                    <label for="" className="contact__label">
+                    <label htmlFor="" className="contact__label">
                       Email
                     </label>
                   </div>
@@ -292,7 +291,7 @@ export const Home = () => {
                       placeholder=" "
                       className="contact__input"
                     />
-                    <label for="" className="contact__label">
+                    <label htmlFor="" className="contact__label">
                       Subject
                     </label>
                   </div>
@@ -303,7 +302,7 @@ export const Home = () => {
                       placeholder=" "
                       className="contact__input"
                     ></textarea>
-                    <label for="" className="contact__label">
+                    <label htmlFor="" className="contact__label">
                       Message
                     </label>
                   </div>
@@ -431,3 +430,22 @@ export const Wrapper = styled.div`
     }
   }
 `
+
+// export const Sections = styled.div`
+//   @media screen and (min-width: 767px) {
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+// `
+
+// export const WrapperQuestions = styled.div`
+//   gap: 1.5rem;
+//   padding: 1.5rem 0;
+
+//   @media screen and (min-width: 767px) {
+//     align-items: flex-start;
+//   }
+
+//   @media screen and (min-width: 992px) {
+//     padding: 1rem 0 4rem;
+//   }
+// `
