@@ -301,9 +301,9 @@ export const Navbar = () => {
 
           {/* <!--==================== QUESTIONS ====================--> */}
           <Questions className="section" id="faqs">
-            <h2 className="section__title-center questions__title container">
+            <QuestionsTitle className="section__title-center container">
               Some common questions <br /> were often asked
-            </h2>
+            </QuestionsTitle>
 
             <QuestionsContainer className="container grid">
               <QuestionsGroup>
@@ -756,6 +756,10 @@ const NavBtns = styled.div`
   align-items: center;
   column-gap: 1rem;
 `;
+
+const  QuestionsTitle = styled.h2`
+  text-align: initial;
+`
 
 const Questions = styled.section`
   background-color: var(--first-color-lighten);
