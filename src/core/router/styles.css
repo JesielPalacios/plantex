@@ -197,18 +197,18 @@ the website, in dark theme
 /* } */
 
 /*=============== NAV ===============*/
-nav {
-  display: flex;
+/* nav {
   height: var(--header-height);
+  display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
-/* .nav__logo, */
-.nav__toggle{
-/* .nav__close { */
+/* .nav__logo,
+.nav__toggle,
+.nav__close {
   color: var(--title-color);
-}
+} */
 
 /* .nav__logo {
   text-transform: uppercase;
@@ -229,11 +229,11 @@ nav {
   color: var(--first-color);
 } */
 
-.nav__toggle {
+/* .nav__toggle {
   display: inline-flex;
   font-size: 1.25rem;
   cursor: pointer;
-}
+} */
 
 @media screen and (max-width: 767px) {
   .nav__menu {
@@ -276,9 +276,9 @@ nav {
 } */
 
 /* Show menu */
-.show-menu {
+/* .show-menu {
   right: 0;
-}
+} */
 
 /* Change background header */
 .scroll-header {
@@ -558,10 +558,10 @@ nav {
   background-color: var(--first-color-lighten);
 }
 
-.questions__container {
+/* .questions__container {
   gap: 1.5rem;
   padding: 1.5rem 0;
-}
+} */
 
 .questions__group {
   display: grid;
