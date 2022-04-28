@@ -68,7 +68,7 @@ export const Menu = styled.div`
     margin-left: auto;
   }
 
-  /* ${(menu) => (menu ? 'right: 0;' : '')} */
+  ${(menu) => (menu ? 'right: 0;' : '')}
 `
 
 export const List = styled.ul`
@@ -82,7 +82,6 @@ export const List = styled.ul`
   }
 `
 
-// export const Link = styled(LinkScroll)`
 export const Link = styled(LinkScroll)`
   color: var(--title-color);
   font-weight: var(--font-medium);
@@ -93,15 +92,11 @@ export const Link = styled(LinkScroll)`
     color: var(--first-color);
   }
 
-  /* Active link */
   &.active {
-    /* &[aria-current] { */
-    /* &[active-link] { */
     position: relative;
     color: var(--first-color);
   }
 
-  /* &[aria-current]:after { */
   &.active::after {
     content: '';
     position: absolute;
