@@ -23,7 +23,7 @@ export const routes = [
 
 export const questions = [
   {
-    question_title: 'My flowers are falling off or dying?',
+    question_title: 'How do i choose a plant?',
     question_description:
       'Plants are easy way to add color energy and transform your space but which planet is for you. Choosing the right plant.'
   },
@@ -41,9 +41,51 @@ export const questions = [
 
 export const questions2 = [
   {
-    question_title: 'How do i choose a plant?',
-    question_description:
-      'Plants are easy way to add color energy and transform your space but which planet is for you. Choosing the right plant.'
+    question_title: 'My flowers are falling off or dying?',
+    question_description: `Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant. 
+      Plants are easy way to add color energy and transform your space but which planet is for you.Choosing the right plant.`
   },
   {
     question_title: 'How do I change the pots?',

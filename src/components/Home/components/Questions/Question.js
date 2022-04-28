@@ -15,11 +15,23 @@ export const Question = ({ question_title, question_description, id }) => {
     // console.log(tag)
     // element.scrollIntoView({ behavior: 'smooth' })
 
+    console.log(element.current.getBoundingClientRect())
+
+    // if (accordion) {
+    //   showAccordion()
+    //   content.current.removeAttribute('style')
+    //   element.current.classList.remove('accordion-open')
+    //   // content.current.style.height = 24 + 'px'
+    // } else {
+    //   content.current.style.height =
+    //     element.current.getBoundingClientRect().height + 'px'
+    // }
+
     if (accordion) {
-      content.current.style.height =
-        element.current.getBoundingClientRect().height + 'px'
+      showAccordion()
+      content.current.removeAttribute('style')
     } else {
-      content.current.style.height = 24 + 'px'
+      content.current.style.height = content.current.scrollHeight + 'px'
     }
   }
 
