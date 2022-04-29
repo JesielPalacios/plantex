@@ -1,32 +1,18 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
 export const Question = ({ question_title, question_description, id }) => {
   const [accordion, setAccordion] = useState(false)
   const showAccordion = () => setAccordion(!accordion)
 
+  const handleClass = () => {
+    return accordion ? 'questions__item accordion-open' : 'questions__item'
+  }
+
   let element = useRef()
   let content = useRef()
 
   const setHeight = () => {
-    // const element = document.getElementById(id)
-    // const element = document.getElementById('' + id + '')
-    // const element = document.getElementById(tag)
-    // console.log(tag)
-    // element.scrollIntoView({ behavior: 'smooth' })
-
-    console.log(element.current.getBoundingClientRect())
-
-    // if (accordion) {
-    //   showAccordion()
-    //   content.current.removeAttribute('style')
-    //   element.current.classList.remove('accordion-open')
-    //   // content.current.style.height = 24 + 'px'
-    // } else {
-    //   content.current.style.height =
-    //     element.current.getBoundingClientRect().height + 'px'
-    // }
-
     if (accordion) {
       showAccordion()
       content.current.removeAttribute('style')
@@ -36,13 +22,7 @@ export const Question = ({ question_title, question_description, id }) => {
   }
 
   return (
-    <div
-      className={
-        accordion ? 'questions__item accordion-open' : 'questions__item'
-      }
-      ref={element}
-      id={uuidv4()}
-    >
+    <div className={() => handleClass()} ref={element} id={uuidv4()}>
       <header
         className="questions__header"
         onClick={() => {
