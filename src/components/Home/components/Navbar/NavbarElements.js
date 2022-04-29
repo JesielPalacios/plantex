@@ -68,7 +68,8 @@ export const Menu = styled.div`
     margin-left: auto;
   }
 
-  ${(menu) => (menu ? 'right: 0;' : '')}
+  /* ${(menu) => (menu ? 'right: 0;' : '')} */
+  right: ${(menu) => (menu ? '0;' : '')};
 `
 
 export const List = styled.ul`

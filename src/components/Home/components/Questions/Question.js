@@ -5,10 +5,6 @@ export const Question = ({ question_title, question_description, id }) => {
   const [accordion, setAccordion] = useState(false)
   const showAccordion = () => setAccordion(!accordion)
 
-  const handleClass = () => {
-    return accordion ? 'questions__item accordion-open' : 'questions__item'
-  }
-
   let element = useRef()
   let content = useRef()
 
@@ -22,7 +18,13 @@ export const Question = ({ question_title, question_description, id }) => {
   }
 
   return (
-    <div className={() => handleClass()} ref={element} id={uuidv4()}>
+    <div
+      className={
+        accordion ? 'questions__item accordion-open' : 'questions__item'
+      }
+      ref={element}
+      id={uuidv4()}
+    >
       <header
         className="questions__header"
         onClick={() => {

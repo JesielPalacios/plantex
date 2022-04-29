@@ -15,7 +15,10 @@ import {
 
 export const Navbar = ({ darkTheme, showDarkTheme }) => {
   const [menu, setMenu] = useState(false)
-  const showMenu = () => setMenu(!menu)
+  const showMenu = () => {
+    setMenu(!menu)
+    console.log(menu)
+  }
 
   return (
     <Header darkTheme={darkTheme}>
@@ -24,7 +27,7 @@ export const Navbar = ({ darkTheme, showDarkTheme }) => {
           <Icono className="ri-leaf-line"></Icono> Plantex
         </Logo>
 
-        <Menu className={menu ? 'show-menu' : ''} id="menu" menu={menu}>
+        <Menu menu={menu}>
           <List>
             {routes.map(({ path, title }, index) => {
               return (

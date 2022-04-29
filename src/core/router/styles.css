@@ -571,6 +571,9 @@ the website, in dark theme
 .questions__item {
   background-color: var(--container-color);
   border-radius: 0.25rem;
+
+  user-select: none;
+  /* https://www.jasoft.org/Blog/post/como-evitar-que-se-pueda-seleccionar-contenido-en-una-pagina-web-sin-usar-javascript-solo-con-css */
 }
 
 .questions__item-title {
@@ -909,8 +912,8 @@ the website, in dark theme
     height: calc(var(--header-height) + 1.5rem);
     column-gap: 3rem;
   } */
-  .nav__toggle{
-  /* .nav__close { */
+  .nav__toggle {
+    /* .nav__close { */
     display: none;
   }
   /* .nav__list {
